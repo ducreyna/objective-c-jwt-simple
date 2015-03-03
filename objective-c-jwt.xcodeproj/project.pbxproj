@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D83ECD931AA59CAB0037E00C /* Jwt.m in Sources */ = {isa = PBXBuildFile; fileRef = D83ECD921AA59CAB0037E00C /* Jwt.m */; };
+		D83ECD971AA5B5630037E00C /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = D83ECD961AA5B5630037E00C /* Algorithm.m */; };
+		D83ECDA81AA5E4FA0037E00C /* JwtUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D83ECDA71AA5E4FA0037E00C /* JwtUnitTest.m */; };
+		D83ECDA91AA5EBC60037E00C /* Jwt.m in Sources */ = {isa = PBXBuildFile; fileRef = D83ECD921AA59CAB0037E00C /* Jwt.m */; };
+		D83ECDAA1AA5EBC60037E00C /* Jwt.h in Sources */ = {isa = PBXBuildFile; fileRef = D83ECD941AA59D580037E00C /* Jwt.h */; };
+		D83ECDAB1AA5EBC60037E00C /* Algorithm.h in Sources */ = {isa = PBXBuildFile; fileRef = D83ECD951AA5B4890037E00C /* Algorithm.h */; };
+		D83ECDAC1AA5EBC60037E00C /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = D83ECD961AA5B5630037E00C /* Algorithm.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D83ECD861AA5992D0037E00C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D83ECD881AA5992D0037E00C /* objective-c-jwt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objective-c-jwt"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83ECD921AA59CAB0037E00C /* Jwt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jwt.m; sourceTree = "<group>"; };
+		D83ECD941AA59D580037E00C /* Jwt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jwt.h; sourceTree = "<group>"; };
+		D83ECD951AA5B4890037E00C /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		D83ECD961AA5B5630037E00C /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
+		D83ECD9C1AA5E1830037E00C /* objective-c-jwt-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objective-c-jwt-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83ECD9F1AA5E1830037E00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83ECDA71AA5E4FA0037E00C /* JwtUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwtUnitTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D83ECD851AA5992D0037E00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83ECD991AA5E1830037E00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D83ECD7F1AA5992D0037E00C = {
+			isa = PBXGroup;
+			children = (
+				D83ECD8A1AA5992D0037E00C /* objective-c-jwt */,
+				D83ECD9D1AA5E1830037E00C /* objective-c-jwt-test */,
+				D83ECD891AA5992D0037E00C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D83ECD891AA5992D0037E00C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D83ECD881AA5992D0037E00C /* objective-c-jwt */,
+				D83ECD9C1AA5E1830037E00C /* objective-c-jwt-test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D83ECD8A1AA5992D0037E00C /* objective-c-jwt */ = {
+			isa = PBXGroup;
+			children = (
+				D83ECD921AA59CAB0037E00C /* Jwt.m */,
+				D83ECD941AA59D580037E00C /* Jwt.h */,
+				D83ECD951AA5B4890037E00C /* Algorithm.h */,
+				D83ECD961AA5B5630037E00C /* Algorithm.m */,
+			);
+			path = "objective-c-jwt";
+			sourceTree = "<group>";
+		};
+		D83ECD9D1AA5E1830037E00C /* objective-c-jwt-test */ = {
+			isa = PBXGroup;
+			children = (
+				D83ECD9E1AA5E1830037E00C /* Supporting Files */,
+				D83ECDA71AA5E4FA0037E00C /* JwtUnitTest.m */,
+			);
+			path = "objective-c-jwt-test";
+			sourceTree = "<group>";
+		};
+		D83ECD9E1AA5E1830037E00C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D83ECD9F1AA5E1830037E00C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D83ECD871AA5992D0037E00C /* objective-c-jwt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83ECD8F1AA5992D0037E00C /* Build configuration list for PBXNativeTarget "objective-c-jwt" */;
+			buildPhases = (
+				D83ECD841AA5992D0037E00C /* Sources */,
+				D83ECD851AA5992D0037E00C /* Frameworks */,
+				D83ECD861AA5992D0037E00C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "objective-c-jwt";
+			productName = "objective-c-jwt";
+			productReference = D83ECD881AA5992D0037E00C /* objective-c-jwt */;
+			productType = "com.apple.product-type.tool";
+		};
+		D83ECD9B1AA5E1830037E00C /* objective-c-jwt-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83ECDA21AA5E1830037E00C /* Build configuration list for PBXNativeTarget "objective-c-jwt-test" */;
+			buildPhases = (
+				D83ECD981AA5E1830037E00C /* Sources */,
+				D83ECD991AA5E1830037E00C /* Frameworks */,
+				D83ECD9A1AA5E1830037E00C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "objective-c-jwt-test";
+			productName = "objective-c-jwt-test";
+			productReference = D83ECD9C1AA5E1830037E00C /* objective-c-jwt-test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D83ECD801AA5992D0037E00C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Nathan Ducrey";
+				TargetAttributes = {
+					D83ECD871AA5992D0037E00C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					D83ECD9B1AA5E1830037E00C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = D83ECD831AA5992D0037E00C /* Build configuration list for PBXProject "objective-c-jwt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D83ECD7F1AA5992D0037E00C;
+			productRefGroup = D83ECD891AA5992D0037E00C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D83ECD871AA5992D0037E00C /* objective-c-jwt */,
+				D83ECD9B1AA5E1830037E00C /* objective-c-jwt-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D83ECD9A1AA5E1830037E00C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D83ECD841AA5992D0037E00C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83ECD971AA5B5630037E00C /* Algorithm.m in Sources */,
+				D83ECD931AA59CAB0037E00C /* Jwt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83ECD981AA5E1830037E00C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83ECDA91AA5EBC60037E00C /* Jwt.m in Sources */,
+				D83ECDAA1AA5EBC60037E00C /* Jwt.h in Sources */,
+				D83ECDAB1AA5EBC60037E00C /* Algorithm.h in Sources */,
+				D83ECDAC1AA5EBC60037E00C /* Algorithm.m in Sources */,
+				D83ECDA81AA5E4FA0037E00C /* JwtUnitTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D83ECD8D1AA5992D0037E00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D83ECD8E1AA5992D0037E00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D83ECD901AA5992D0037E00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D83ECD911AA5992D0037E00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D83ECDA31AA5E1830037E00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "objective-c-jwt-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D83ECDA41AA5E1830037E00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "objective-c-jwt-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D83ECD831AA5992D0037E00C /* Build configuration list for PBXProject "objective-c-jwt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83ECD8D1AA5992D0037E00C /* Debug */,
+				D83ECD8E1AA5992D0037E00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D83ECD8F1AA5992D0037E00C /* Build configuration list for PBXNativeTarget "objective-c-jwt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83ECD901AA5992D0037E00C /* Debug */,
+				D83ECD911AA5992D0037E00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D83ECDA21AA5E1830037E00C /* Build configuration list for PBXNativeTarget "objective-c-jwt-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83ECDA31AA5E1830037E00C /* Debug */,
+				D83ECDA41AA5E1830037E00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D83ECD801AA5992D0037E00C /* Project object */;
+}
