@@ -22,13 +22,13 @@
     NSString *signatureSeg = segments[2];
     
     // Base64 decode and parse JSON
-    NSError *error;
+    NSError *error = nil;
     NSDictionary *header = [NSJSONSerialization JSONObjectWithData:[Jwt base64DecodeWithString:headerSeg] options:NSJSONReadingMutableLeaves error:&error];
-    if(!header) {
+    if(error) {
         @throw [NSException exceptionWithName:@"Cannot deserialize header" reason:[error localizedFailureReason] userInfo:nil];
     }
     NSDictionary *payload = [NSJSONSerialization JSONObjectWithData:[Jwt base64DecodeWithString:payloadSeg] options:NSJSONReadingMutableLeaves error:&error];
-    if(!payload) {
+    if(error) {
         @throw [NSException exceptionWithName:@"Cannot deserialize payload" reason:[error localizedFailureReason] userInfo:nil];
     }
     
@@ -58,13 +58,13 @@
                              @"alg": @"HS256"
                              };
     
-    NSError *error;
+    NSError *error = nil;
     NSData *jsonHeader = [NSJSONSerialization dataWithJSONObject:header options:0 error:&error];
-    if(!jsonHeader) {
+    if(error) {
         @throw [NSException exceptionWithName:@"Cannot serialize header" reason:[error localizedFailureReason] userInfo:nil];
     }
     NSData *jsonPayload = [NSJSONSerialization dataWithJSONObject:payload options:0 error:&error];
-    if(!jsonPayload) {
+    if(error) {
         @throw [NSException exceptionWithName:@"Cannot serialize payload" reason:[error localizedFailureReason] userInfo:nil];
     }
     
@@ -89,13 +89,13 @@
                              @"alg": [Algorithm getValueWithAlgorithmType:HS256]
                              };
     
-    NSError *error;
+    NSError *error = nil;
     NSData *jsonHeader = [NSJSONSerialization dataWithJSONObject:header options:0 error:&error];
-    if (!jsonHeader) {
+    if (error) {
         @throw [NSException exceptionWithName:@"Cannot serialize header" reason:[error localizedFailureReason] userInfo:nil];
     }
     NSData *jsonPayload = [NSJSONSerialization dataWithJSONObject:payload options:0 error:&error];
-    if (!jsonPayload) {
+    if (error) {
         @throw [NSException exceptionWithName:@"Cannot serialize payload" reason:[error localizedFailureReason] userInfo:nil];
     }
     
