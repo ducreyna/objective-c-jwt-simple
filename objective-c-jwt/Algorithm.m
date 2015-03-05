@@ -24,7 +24,7 @@
             result = @"HS512";
             break;
         default:
-            @throw [NSException exceptionWithName:@"Bad AlgorithmType" reason:@"Algorithm not supported" userInfo:nil];
+            break;
     }
     
     return result;
