@@ -21,24 +21,32 @@ static NSString *const key = @"secret";
 
 - (void)testKeyEncodeEmpty {
     NSDictionary *payload = [[NSDictionary alloc] init];
+    NSError *error;
+    NSString *token = [Jwt encodeWithPayload:payload andKey:nil andError:&error];
     
     // Asserts
-    XCTAssertThrows([Jwt encodeWithPayload:payload andKey:nil]);
+    XCTAssertNil(token);
+    XCTAssertEqual([error domain], @"ducreyna.objective-c-jwt.JwtErrorDomain");
+    XCTAssertEqual([error code], -1004);
+    XCTAssertEqual([error localizedFailureReason], @"Key cannot be nil or empty");
 }
 
 - (void)testKeyDecodeEmpty {
     // Asserts
-    XCTAssertThrows([Jwt decodeWithToken:@"token" andKey:nil andVerify:true]);
+    NSError *error;
+    NSDictionary *decoded = [Jwt decodeWithToken:@"token1.token2.token3" andKey:nil andVerify:true andError:&error];
+    XCTAssertNil(decoded);
+    XCTAssertEqual([error code], -1004);
+    XCTAssertEqual([error localizedFailureReason], @"Key cannot be nil or empty");
 }
 
 - (void)testTokenEmpty {
     // Asserts
-    XCTAssertThrows([Jwt decodeWithToken:@"" andKey:key andVerify:true]);
-}
-
-- (void)testBadNumberOfSegments {
-    // Asserts
-    XCTAssertThrows([Jwt decodeWithToken:@"segment1.segment2" andKey:key andVerify:true]);
+    NSError *error;
+    NSDictionary *decoded = [Jwt decodeWithToken:@"" andKey:key andVerify:true andError:&error];
+    XCTAssertNil(decoded);
+    XCTAssertEqual([error code], -1000);
+    XCTAssertEqual([error localizedFailureReason], @"Not enough or too many segments");
 }
 
 - (void)testEncode {
@@ -48,10 +56,12 @@ static NSString *const key = @"secret";
                                @"exp": @1425391188545,
                                @"socketId": @"socketId"
                                };
-    NSString *token = [Jwt encodeWithPayload:payload andKey:key];
-    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true];
+    NSError *error;
+    NSString *token = [Jwt encodeWithPayload:payload andKey:key andError:&error];
+    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true andError:&error];
     
     // Asserts
+    XCTAssertNil(error);
     XCTAssertEqualObjects(payload, decoded);
 }
 
@@ -62,48 +72,58 @@ static NSString *const key = @"secret";
                                @"exp": @1425391188545,
                                @"socketId": @"socketId"
                                };
-    NSString *token = [Jwt encodeWithPayload:payload andKey:key andAlgorithm:HS256];
-    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true];
+    NSError *error;
+    NSString *token = [Jwt encodeWithPayload:payload andKey:key andAlgorithm:HS256 andError:&error];
+    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true andError:&error];
     
     // Asserts
+    XCTAssertNil(error);
     XCTAssertEqualObjects(payload, decoded);
 }
 
 - (void)testEncodePayloadEmpty {
+    NSError *error;
     NSDictionary *payload = [[NSDictionary alloc] init];
-    NSString *token = [Jwt encodeWithPayload:payload andKey:key];
-    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true];
+    NSString *token = [Jwt encodeWithPayload:payload andKey:key andError:&error];
+    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true andError:&error];
     
     // Asserts
+    XCTAssertNil(error);
     XCTAssertEqualObjects(payload, decoded);
 }
 
 - (void)testBadToken {
+    NSError *error;
     NSDictionary *payload = @{
                               @"devKey": @"nducrey",
                               @"appKey": @"myApp",
                               @"exp": @1425391188545,
                               @"socketId": @"socketId"
                               };
-    NSString *token = [Jwt encodeWithPayload:payload andKey:key];
+    NSString *token = [Jwt encodeWithPayload:payload andKey:key andError:&error];
     token = [token stringByAppendingString:@"IAMJOKER"];
+    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:true andError:&error];
     
     // Asserts
-    XCTAssertThrows([Jwt decodeWithToken:token andKey:key andVerify:true]);
+    XCTAssertNil(decoded);
+    XCTAssertEqual([error code], -1003);
+    XCTAssertEqual([error localizedFailureReason], @"Decoding failure: Signature verification failed");
 }
 
 - (void)testWithoutVerification {
+    NSError *error;
     NSDictionary *payload = @{
                               @"devKey": @"nducrey",
                               @"appKey": @"myApp",
                               @"exp": @1425391188545,
                               @"socketId": @"socketId"
                               };
-    NSString *token = [Jwt encodeWithPayload:payload andKey:key];
+    NSString *token = [Jwt encodeWithPayload:payload andKey:key andError:&error];
     token = [token stringByAppendingString:@"IAMBATMAN"];
-    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:false];
+    NSDictionary *decoded = [Jwt decodeWithToken:token andKey:key andVerify:false andError:&error];
     
     // Asserts
+    XCTAssertNil(error);
     XCTAssertEqualObjects(payload, decoded);
 }
 
