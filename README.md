@@ -10,7 +10,7 @@ Objective-c implementation of JSON Web Tokens. An easy way to encode and decode 
 
 ## API
 
-#### + (NSString *) encodeWithPayload:(NSDictionary *) andKey:(NSString *) andError:(NSError **)
+#### + (NSString \*) encodeWithPayload:(NSDictionary \*) andKey:(NSString \*) andError:(NSError \**)
 
 - @param payload **JSON to attach**
 - @param key **Secret key for encoding**
@@ -35,7 +35,7 @@ if(token == nil) {
 }
 ```
 
-#### + (NSString *) encodeWithPayload:(NSDictionary *) andKey:(NSString *) andAlgorithm:(AlgorithmType) andError:(NSError **)
+#### + (NSString \*) encodeWithPayload:(NSDictionary \*) andKey:(NSString \*) andAlgorithm:(AlgorithmType) andError:(NSError \**)
 
 - @param payload **JSON to attach**
 - @param key **Secret key for encoding**
@@ -64,7 +64,7 @@ if(token == nil) {
 }
 ```
 
-#### + decodeWithToken:(NSString *) andKey:(NSString *) andVerify:(BOOL) andError:(NSError **)
+#### + (NSDictionary \*) decodeWithToken:(NSString \*) andKey:(NSString \*) andVerify:(BOOL) andError:(NSError \**)
 
 - @param token **Jwt to decode**
 - @param key **Secret key for decoding**
